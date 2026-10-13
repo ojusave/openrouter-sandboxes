@@ -29,7 +29,7 @@ Render's Sandbox interfaces are experimental. This example pins both Render SDKs
 Clone this repository in a terminal, then enter its directory:
 
 ```shell
-git clone https://github.com/render-examples/openrouter-sandboxes.git
+git clone https://github.com/ojusave/openrouter-sandboxes.git
 cd openrouter-sandboxes
 ```
 
