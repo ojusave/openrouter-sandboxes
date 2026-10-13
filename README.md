@@ -1,10 +1,32 @@
-# Run OpenRouter code repairs in Render Sandboxes
+<!-- Center the project introduction and its navigation, as in the other demo READMEs. -->
+<div align="center">
+
+# OpenRouter + Render Sandboxes
+
+Let an AI model repair Python code on a temporary Render computer, then check and download the result.
+
+<!-- Each badge names a component and links to its documentation or client folder. -->
+<p>
+  <a href="https://render.com/docs/sandboxes?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=ojus_demos&amp;utm_content=readme_badge" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Render-Sandboxes-6e40c9?logo=render&amp;logoColor=white" alt="Render Sandboxes" /></a>
+  <a href="https://openrouter.ai/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/OpenRouter-Models-555555?logo=openrouter&amp;logoColor=white" alt="OpenRouter Models" /></a>
+  <a href="typescript/main.ts" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/TypeScript-Client-3178C6?logo=typescript&amp;logoColor=white" alt="TypeScript client" /></a>
+  <a href="python/main.py" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Python-Client-3776AB?logo=python&amp;logoColor=white" alt="Python client" /></a>
+  <!-- GitHub supplies this badge's current status from the main branch's automated checks. -->
+  <a href="https://github.com/ojusave/openrouter-sandboxes/actions/workflows/checks.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/ojusave/openrouter-sandboxes/actions/workflows/checks.yml/badge.svg?branch=main" alt="Automated checks on main" /></a>
+</p>
+
+<!-- Offer a clear starting point, setup shortcut, and evidence link before the longer explanation. -->
+<p>
+  <a href="guides/openrouter-sandboxes.md" target="_blank" rel="noopener noreferrer"><strong>Read the beginner guide</strong></a>
+  · <a href="#clone-and-configure-the-example">Run the example</a>
+  · <a href="VALIDATION.md" target="_blank" rel="noopener noreferrer">Test results</a>
+</p>
+
+</div>
 
 An AI model can write a code change, but you need to run the code to see whether it works. A **sandbox** gives it a separate place to run: a temporary environment where the example's files can be changed and tested, then copied out before that environment is discarded.
 
 This example uses **OpenRouter** to reach an AI model and **Render Sandboxes** to run the generated Python code. The code runs on Render, separately from your computer. This is called **isolated code execution**. The sandbox is a real place to execute code; tests check whether that code gives the right answers.
-
-**New to sandboxes? Start with the [step-by-step guide](guides/openrouter-sandboxes.md).** It explains each part before you run it, including which account keys you need and what the output means.
 
 You run this example in a **terminal**, the app where you type commands and read their output. A program on your computer, called the **client**, coordinates OpenRouter and Render. Choose either the TypeScript or Python client; both execute Python code inside Render. The example creates its temporary Render environments when you start it. There is no web interface to open.
 
