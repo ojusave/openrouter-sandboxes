@@ -1,9 +1,9 @@
 flowchart TB
-    A[1. Your computer<br/>Send task and tool definitions<br/>Keep both API keys here]
-    B[2. OpenRouter model<br/>Request a file read, edit,<br/>or test run]
-    C[3. Your computer<br/>Validate the requested action]
-    D[4. Render working sandbox<br/>Run Python and return output<br/>No host API keys]
-    E[5. Your computer<br/>Return results to the model<br/>Repeat steps 2 to 4 as needed]
-    F[6. Fresh Render sandbox<br/>Independently test the repair]
-    G[7. Snapshot and restore<br/>Continue from saved files<br/>Verify, then clean up]
+    A["1. Your computer<br/>Create a temporary Render computer<br/>Copy the example files there"]
+    B["2. AI model through OpenRouter<br/>Ask to read, edit,<br/>or test the invoice code"]
+    C["3. Your computer<br/>Check that the requested<br/>action is allowed"]
+    D["4. Render sandbox<br/>Run the requested action<br/>Return files or test results"]
+    E["5. Your computer<br/>Send results back to the model<br/>Repeat steps 2 to 4 as needed"]
+    F["6. A fresh Render sandbox<br/>Check the repaired code<br/>against the original tests"]
+    G["7. Save files and continue<br/>Restore into another sandbox<br/>Add shipping, check, then clean up"]
     A --> B --> C --> D --> E --> F --> G

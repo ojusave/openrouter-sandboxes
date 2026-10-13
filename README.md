@@ -1,16 +1,24 @@
 # Run OpenRouter code repairs in Render Sandboxes
 
-An AI model can suggest a code change, but it needs a computer to run tests and check that the change works. This example connects OpenRouter, which supplies model responses, to Render Sandboxes, which provide temporary Linux computers for running code.
+An AI model can write a code change, but you need to run the code to see whether it works. A **sandbox** gives it a separate place to run: a temporary environment where the example's files can be changed and tested, then copied out before that environment is discarded.
 
-Your local TypeScript or Python client gives the model three actions: read a file, replace `totals.py`, and run the tests. Asking a model to choose one of these actions is called **tool calling**. The client checks each request and runs the action in Render.
+This example uses **OpenRouter** to reach an AI model and **Render Sandboxes** to run the generated Python code. The code runs on Render, separately from your computer. This is called **isolated code execution**. The sandbox is a real place to execute code; tests check whether that code gives the right answers.
 
-Both clients repair the same Python program. An invoice line costs 125 cents and has a quantity of three, but the broken program returns **125 instead of 375**. After the repair, the client checks the code in a fresh sandbox, saves its files, restores them into another sandbox, and asks the model to add a shipping charge. The final example returns **425 cents**, including 50 cents for shipping.
+**New to sandboxes? Start with the [step-by-step guide](guides/openrouter-sandboxes.md).** It explains each part before you run it, including which account keys you need and what the output means.
+
+You run this example in a **terminal**, the app where you type commands and read their output. A program on your computer, called the **client**, coordinates OpenRouter and Render. Choose either the TypeScript or Python client; both execute Python code inside Render. The example creates its temporary Render environments when you start it. There is no web interface to open.
+
+## What you will see
+
+1. **Reproduce a bug.** Three invoice items at 125 cents each should cost 375 cents. The starting code returns 125, so its test fails.
+2. **Ask the model to fix it.** The model requests file reads, an edit, or test runs. These actions are called tools. The client checks each request and runs the allowed action in Render.
+3. **Check the answer.** The client downloads the repair and runs seven tests in a fresh sandbox, using original tests and extra cases the model was not shown.
+4. **Continue from saved files.** The client saves a copy of the sandbox's files, called a snapshot, and restores them into another sandbox. A new model task adds 50 cents shipping. The final total is 425 cents, and twelve independent tests check the result.
+5. **Keep the result and clean up.** The client downloads both versions of the Python file, terminates the four sandboxes, and deletes the snapshot. The downloaded files remain on your computer.
 
 ![Where requests and code execute](docs/architecture.svg)
 
-OpenRouter requests originate from your computer. The sandbox has outbound network access disabled and receives neither API key. The model gets file contents and bounded test output through the client. Both client languages execute Python code in the sandbox.
-
-For the full walkthrough, read [Run OpenRouter Agents in Render Sandboxes](guides/openrouter-sandboxes.md). It explains the execution model, setup, verification, snapshot restoration, and cleanup.
+Your client keeps the account access keys on your computer. The sandbox receives neither key and has outgoing network connections disabled. The client sends sample file contents and test output back through OpenRouter to the model provider so the model can decide its next action.
 
 ## Prerequisites
 
@@ -18,20 +26,24 @@ For the full walkthrough, read [Run OpenRouter Agents in Render Sandboxes](guide
 - <a href="https://openrouter.ai/settings/keys" target="_blank" rel="noopener noreferrer">OpenRouter access and model credits</a>. The tested model is `anthropic/claude-haiku-5.5`. You can set `OPENROUTER_MODEL` to another model that supports <a href="https://openrouter.ai/docs/guides/features/tool-calling" target="_blank" rel="noopener noreferrer">tool calling</a>.
 - Node.js 22 or later for the TypeScript client, or Python 3.11 or later for the Python client.
 
+API keys are secret values that let the client request work from each service. The workspace identifier chooses where Render creates resources. The full guide links to account setup and explains each value.
+
 | Variable | Purpose and required access | Where it stays |
 | --- | --- | --- |
 | `RENDER_API_KEY` | <a href="https://render.com/docs/api#1-create-an-api-key" target="_blank" rel="noopener noreferrer">Render API key</a> belonging to a user with permission to create, inspect, terminate, and snapshot Sandboxes in the selected workspace. | Your client process |
 | `RENDER_WORKSPACE_ID` | The `tea-...` ID from the workspace's Dashboard settings. It selects where resources are created; it is not a secret. | Your client process |
 | `OPENROUTER_API_KEY` | An <a href="https://openrouter.ai/settings/keys" target="_blank" rel="noopener noreferrer">OpenRouter API key</a> with permission and credits for model requests. | Your client process |
 
-Render's Sandbox interfaces are experimental. This example pins both Render SDKs to version 1.2.0. The Python client also pins HTTPX 0.28.1 for OpenRouter requests. See <a href="VALIDATION.md" target="_blank" rel="noopener noreferrer">the validation record</a> for exact tested versions and limits.
+Render Sandboxes is in early access. This example uses Render's software development kit (SDK), a library for creating and managing sandboxes, and pins both language versions to 1.2.0. The Python client also pins HTTPX 0.28.1 for OpenRouter requests. See <a href="VALIDATION.md" target="_blank" rel="noopener noreferrer">the validation record</a> for exact tested versions and limits.
 
 ## Clone and configure the example
 
 Clone this repository in a terminal, then enter its directory:
 
 ```shell
+# Download the example into a new folder named openrouter-sandboxes.
 git clone https://github.com/ojusave/openrouter-sandboxes.git
+# Make that folder the location for the following commands.
 cd openrouter-sandboxes
 ```
 
@@ -40,7 +52,9 @@ These setup commands use a macOS or Linux shell.
 Create a private configuration file:
 
 ```shell
+# Copy the settings template; add your own values to this new file next.
 cp .env.example .env
+# Allow only your computer's user account to read or change the file.
 chmod 600 .env
 ```
 
@@ -49,8 +63,11 @@ In your editor, fill in the three required values in `.env`. This file is ignore
 Load those settings into the current terminal. Only source the configuration file you just created and edited:
 
 ```shell
+# Share settings loaded next with programs started by this terminal.
 set -a
+# Read the .env file you just created and edited.
 . ./.env
+# Stop automatically sharing any additional settings you define later.
 set +a
 ```
 
@@ -62,8 +79,11 @@ Choose one client below. Each runs the complete example independently, so runnin
 From the `openrouter-sandboxes` directory, install the pinned dependencies and run the client:
 
 ```shell
+# Enter the TypeScript client's folder.
 cd typescript
+# Install the exact library versions recorded with the example.
 npm ci
+# Start the client, which contacts OpenRouter and creates Render sandboxes.
 npm run demo
 ```
 
@@ -77,9 +97,13 @@ The implementation is in <a href="typescript/main.ts" target="_blank" rel="noope
 From the `openrouter-sandboxes` directory, create a separate place for the required packages, install them, and run the client:
 
 ```shell
+# Enter the Python client's folder.
 cd python
+# Create a local folder to hold this client's Python packages.
 python3 -m venv .venv
+# Install the library versions listed by the example into that folder.
 .venv/bin/python -m pip install -r requirements.txt
+# Start the client using that folder's Python program and libraries.
 .venv/bin/python main.py
 ```
 
@@ -97,6 +121,8 @@ followup_passed_independent_tests: true
 cleanup_verified: true
 ```
 
+**The first failure is expected:** `initial_tests_fail: true` confirms the starting invoice bug. The next checkpoints confirm the repair, restored files, shipping change, and cleanup.
+
 The client first waits for Render to finish creating each sandbox. That wait means the computer is starting; it does not mean the model has finished the task. Model calls and snapshot capture may also take time between checkpoints.
 
 ## Inspect the result
@@ -107,7 +133,7 @@ Each run prints an `Evidence:` path under `.runs/`. That directory contains:
 - `totals.py`: the final program, including the shipping change.
 - `run.json`: the requested model, actual models returned by OpenRouter, usage, test output, resource IDs, and confirmed cleanup state. It does not store API keys.
 
-The repair passes seven tests in a fresh verification sandbox. The follow-up passes twelve. The model cannot edit the visible test files through its tools, and the fresh verifier receives the host's original tests plus additional cases withheld from the model. These checks establish the sample's behavior; they are not a general proof that arbitrary generated code is trustworthy.
+The repair passes seven tests in a fresh verification sandbox. The follow-up passes twelve. The model cannot edit the visible test files through its tools, and the fresh sandbox receives the original tests kept on your computer plus additional cases the model was not shown. These checks establish the sample's behavior; they are not a general proof that arbitrary generated code is trustworthy.
 
 The client also compares the restored source byte for byte and checks a randomly generated marker file. This proves that project files survived after the original sandbox was terminated. A filesystem snapshot restores files into a new sandbox. It does not restore a model conversation or a running process.
 
@@ -123,7 +149,7 @@ If a run stops, read its `run.json`. From your chosen client directory, retry cl
 | --- | --- |
 | `npm run demo -- cleanup --run-dir ../.runs/YOUR-RUN` | `.venv/bin/python main.py cleanup --run-dir ../.runs/YOUR-RUN` |
 
-The same workspace configuration is required. Cleanup only acts on IDs recorded by that run. If the journal contains `pending_create` or `pending_snapshot`, the creation request had an unknown outcome. Inspect resources in Render using the recorded time or snapshot name before attempting another creation. The client reports this uncertainty instead of silently retrying and potentially creating duplicates.
+The same workspace configuration is required. Cleanup only acts on IDs recorded by that run. If `run.json` contains `pending_create` or `pending_snapshot`, the creation request had an unknown outcome. Inspect resources in Render using the recorded time or snapshot name before attempting another creation. The client reports this uncertainty instead of silently retrying and potentially creating duplicates.
 
 ## Run the checks
 
@@ -147,4 +173,4 @@ Test commands have a twelve-second execution limit and retain at most 16,384 byt
 
 ## Scope
 
-This is a runnable application-owned integration example. It uses OpenRouter's existing client-tool interface and Render's Sandbox SDKs. It does not implement an OpenRouter Spawn provider, an interactive terminal, a public web app, or Render Workflows. The existing <a href="https://openrouter.ai/docs/guides/community/render" target="_blank" rel="noopener noreferrer">Render Workflows guide on OpenRouter</a> covers the separate background-task pattern.
+This example lets your application control the model's actions and the temporary computers where code runs. It uses OpenRouter's tool-calling interface and Render's Sandbox SDKs. The existing <a href="https://openrouter.ai/docs/guides/community/render" target="_blank" rel="noopener noreferrer">Render Workflows guide on OpenRouter</a> covers the separate background-task pattern.
