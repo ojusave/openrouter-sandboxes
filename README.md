@@ -10,6 +10,8 @@ Both clients repair the same Python program. An invoice line costs 125 cents and
 
 OpenRouter requests originate from your computer. The sandbox has outbound network access disabled and receives neither API key. The model gets file contents and bounded test output through the client. Both client languages execute Python code in the sandbox.
 
+For the full walkthrough, read [Run OpenRouter Agents in Render Sandboxes](guides/openrouter-sandboxes.md). It explains the execution model, setup, verification, snapshot restoration, and cleanup.
+
 ## Prerequisites
 
 - A <a href="https://render.com/docs/sandboxes" target="_blank" rel="noopener noreferrer">Render workspace with Sandboxes enabled</a>. This example requests the `starter` Sandbox plan.
