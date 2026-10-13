@@ -167,8 +167,6 @@ The terminal also prints an `Evidence:` path under `.runs/` in the downloaded pr
 
 You can inspect these files after cleanup. You do not need to run the generated Python file on your computer; the checks already run inside Render.
 
-Both client paths completed real OpenRouter and Render runs on October 12, 2026. See the <a href="https://github.com/ojusave/openrouter-sandboxes/blob/main/VALIDATION.md" target="_blank" rel="noopener noreferrer">tested versions, sanitized evidence, and proof limits</a>. Those tests establish this sample's behavior; other generated programs and models need their own checks.
-
 ## 4. Confirm cleanup or recover an interrupted run
 
 The client downloads the results before terminating the four sandboxes and deleting the snapshot. Removing resources avoids leaving temporary computers and saved files behind after the task. It attempts cleanup after success and handled failures, then checks Render's reported state. Your downloaded files remain in `.runs/`.

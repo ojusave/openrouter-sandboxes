@@ -11,15 +11,12 @@ Ask an AI model to fix Python code in a Render Sandbox, a temporary computer sep
   <a href="https://openrouter.ai/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/OpenRouter-Models-555555?logo=openrouter&amp;logoColor=white" alt="OpenRouter Models" /></a>
   <a href="typescript/main.ts" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/TypeScript-Client-3178C6?logo=typescript&amp;logoColor=white" alt="TypeScript client" /></a>
   <a href="python/main.py" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Python-Client-3776AB?logo=python&amp;logoColor=white" alt="Python client" /></a>
-  <!-- GitHub supplies this badge's current status from the main branch's automated checks. -->
-  <a href="https://github.com/ojusave/openrouter-sandboxes/actions/workflows/checks.yml" target="_blank" rel="noopener noreferrer"><img src="https://github.com/ojusave/openrouter-sandboxes/actions/workflows/checks.yml/badge.svg?branch=main" alt="Automated checks on main" /></a>
 </p>
 
-<!-- Offer a clear starting point, setup shortcut, and evidence link before the longer explanation. -->
+<!-- Link the walkthrough and the commands for running the example. -->
 <p>
   <a href="guides/openrouter-sandboxes.md" target="_blank" rel="noopener noreferrer"><strong>Guide</strong></a>
   · <a href="#quickstart">Quickstart</a>
-  · <a href="VALIDATION.md" target="_blank" rel="noopener noreferrer">Test results</a>
 </p>
 
 </div>
@@ -93,7 +90,3 @@ Python prints `True` on the cleanup line. The earlier `initial_tests_fail: true`
 The printed `Evidence:` folder contains `repaired.py`, the final `totals.py`, and `run.json` with test and cleanup results. The example removes its temporary Render resources after downloading the files.
 
 <a href="guides/openrouter-sandboxes.md" target="_blank" rel="noopener noreferrer">Full walkthrough</a> · <a href="guides/openrouter-sandboxes.md#how-openrouter-sandbox-execution-works" target="_blank" rel="noopener noreferrer">How it works</a> · <a href="guides/openrouter-sandboxes.md#4-confirm-cleanup-or-recover-an-interrupted-run" target="_blank" rel="noopener noreferrer">Cleanup and recovery</a>
-
-## Run the checks
-
-See <a href="VALIDATION.md#run-the-checks" target="_blank" rel="noopener noreferrer">test commands</a> and <a href="VALIDATION.md" target="_blank" rel="noopener noreferrer">recorded results</a>.
