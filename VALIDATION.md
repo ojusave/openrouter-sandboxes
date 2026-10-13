@@ -52,7 +52,29 @@ Resource verification uses Render's reported state and paginated listings. It is
 
 ## Documentation checks
 
-The local README preview was rendered at 1120px and 390px widths. The diagram is 276px wide, with no page overflow or overlapping labels. Both language sections open, and authored links use a new tab with `noopener noreferrer`. This is a local preview, not a deployed Render docs page. See <a href="docs/preview-checks.json" target="_blank" rel="noopener noreferrer">preview checks</a>.
+The original full README preview was rendered at 1120px and 390px widths. The diagram is 276px wide, with no page overflow or overlapping labels. Both language sections open, and authored links use a new tab with `noopener noreferrer`. This is a local preview, not a deployed Render docs page. See <a href="docs/preview-checks.json" target="_blank" rel="noopener noreferrer">preview checks</a>.
+
+The shortened README was also checked at 1120px and 390px. Its five badges load, both language sections open, and its setup commands match the previous version. The full walkthrough and diagram are available in <a href="guides/openrouter-sandboxes.md" target="_blank" rel="noopener noreferrer">the guide</a>.
+
+## Run the checks
+
+After completing the quickstart, run commands from your selected `typescript` or `python` folder. Offline checks need no account keys or cloud resources. They exercise invalid tool requests, write limits, missing command exit events, excessive output, paginated cleanup, recovery after deletion, and rejection of a failed independent verification.
+
+| TypeScript directory | Python directory |
+| --- | --- |
+| `npm run check` and `npm test` | `.venv/bin/python -m unittest discover -s ../tests -p 'test_*.py' -v` |
+
+To test the actual execution limits and failure cleanup, run each mode from the same client directory with the Render settings loaded. These checks create temporary paid sandboxes:
+
+| What is checked | TypeScript | Python |
+| --- | --- | --- |
+| Runtime/output limits, credentials absent, outbound request blocked or timed out with a successful host control | `npm run demo -- boundaries` | `.venv/bin/python main.py boundaries` |
+| Cleanup after an intentionally failed run | `npm run demo -- fail-after-create` | `.venv/bin/python main.py fail-after-create` |
+| Cleanup after a snapshot was captured | `npm run demo -- fail-after-snapshot` | `.venv/bin/python main.py fail-after-snapshot` |
+
+The two `fail-` modes intentionally exit with an error. Success for these checks means the failure is recorded and `cleanup_verified` is true. The model is not called in these modes.
+
+Test commands have a twelve-second execution limit and retain at most 16,384 bytes of output before stopping the child process group. File writes are limited to 16,384 UTF-8 bytes. Each model task is limited to ten responses and twenty-four tool calls. Remote command transport failures stop the run and trigger sandbox cleanup.
 
 ## GitHub checks
 
