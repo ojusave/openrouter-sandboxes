@@ -1,0 +1,17 @@
+{
+  "python/requirements.txt": "4372221fd7b3d17589fc91b268f831bddbf9e022b49a8e958aa18440e4f28918",
+  "python/main.py": "6443b4c1a1a73ba5e092d15d61108ed19fbb3b3855606939efd4650d808d5b2e",
+  "typescript/main.ts": "f59f84921b414f2be65a28598bfdd01f19d3bf268cc7da5b310a4453736d6818",
+  "typescript/package-lock.json": "04723f2a0384f614eb6debb829dac9934ee398eb05d05e702d0b1a1fe278b25f",
+  "typescript/package.json": "bcd540cb44a0f2bee3ecfc8bf72aa0878111e7474634625b1ed49234235bcc6c",
+  "typescript/tsconfig.json": "6dba7c055893087093c8d2d80b006ffc9b98b21a5ef677ff03b1a07639d9be2b",
+  "shared/remote.py": "816b33315a0bf00efdf4cf69f525ae46674917a8dd0e2cc367208b1b0d1d6892",
+  "shared/test_totals.py": "ead340c337d484b6487a75caafa14cf1375cf6249e58c6c8f2ea60f9b86084d0",
+  "shared/test_shipping_acceptance.py": "1aa8ec60fe7460d90be32cfd48a7bf6a89fabcebd86858e3f5365054320a9355",
+  "shared/test_acceptance.py": "9e02324e0ea3b6f38f047b522a26aee83dd07952be839ce536c5132bb092141b",
+  "shared/totals.py": "97ff50db9a5f3e89a4c8f8587fbe9cddbcb114f0e709acb535169653a6106a2b",
+  "shared/test_followup.py": "afc9789e6cab7dc0ca6a6e567474993ab746b00aace9d9cb785be4ae24633d53",
+  "shared/contract.json": "abf5a9379c57f3cf28bbbcf2fbb3d87694c32f287b37354f6f6bdedb31d73741",
+  "tests/test_client.py": "86f045bbe6c2a8af2b449f9e35806ed2a6a065b8a3beb2eb214a235ce0d88658",
+  "tests/client.test.mts": "0dc8e97bdc1a4818e142714db15a38cee15a73c8a0530347ecc4623b7d2ce5a2"
+}

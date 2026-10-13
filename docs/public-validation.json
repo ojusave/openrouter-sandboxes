@@ -1,0 +1,2512 @@
+{
+  "checked_at": "2026-10-13T06:11:19.917393+00:00",
+  "python_runtime": "3.13.14 and 3.14.3",
+  "node_runtime": "24.18.0",
+  "render_sdk": "1.2.0 in both clients",
+  "openrouter_model": "anthropic/claude-haiku-5.5",
+  "unit_tests": {
+    "python": 9,
+    "typescript": 11
+  },
+  "redaction": "Workspace, sandbox, snapshot, group, and model-request IDs are omitted. Test output and outcomes are retained. Cleanup replay records reference the same resources as prior demo runs.",
+  "cleanup_audit": {
+    "checked_at": "2026-10-13T06:11:19.917393+00:00",
+    "owned_sandboxes": 32,
+    "owned_snapshots": 8,
+    "all_journals_clean": true,
+    "passed": true,
+    "active_owned_sandbox_count": 0,
+    "remaining_owned_snapshot_count": 0
+  },
+  "runs": {
+    "python-clean-install": {
+      "language": "python",
+      "started_at": "2026-10-13T06:05:19.702528+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "09a70214b3b1c2425d094618f6b4629b8e2e4e212578b85552b40a0e44838b47",
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 135,
+            "total_tokens": 973,
+            "cost": 0.0001513,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001513,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 6.75e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 35,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1280,
+            "completion_tokens": 361,
+            "total_tokens": 1641,
+            "cost": 0.0003085,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003085,
+              "upstream_inference_prompt_cost": 0.000128,
+              "upstream_inference_completions_cost": 0.0001805
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 122,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1837,
+            "completion_tokens": 141,
+            "total_tokens": 1978,
+            "cost": 0.0002542,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002542,
+              "upstream_inference_prompt_cost": 0.0001837,
+              "upstream_inference_completions_cost": 7.05e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1523,
+            "completion_tokens": 302,
+            "total_tokens": 1825,
+            "cost": 0.0003033,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003033,
+              "upstream_inference_prompt_cost": 0.0001523,
+              "upstream_inference_completions_cost": 0.000151
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2052,
+            "completion_tokens": 149,
+            "total_tokens": 2201,
+            "cost": 0.0002797,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002797,
+              "upstream_inference_prompt_cost": 0.0002052,
+              "upstream_inference_completions_cost": 7.45e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "python-boundaries-final": {
+      "language": "python",
+      "started_at": "2026-10-13T06:02:34.557288+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "network_host_control": true,
+        "sandbox_credentials_absent": true,
+        "exception_is_failure": true,
+        "timeout_enforced": true,
+        "output_bounded": true,
+        "credentials_absent": true,
+        "network_request_blocked_or_timed_out": true
+      },
+      "complete": true,
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [],
+      "model_calls": []
+    },
+    "typescript-live-1": {
+      "language": "typescript",
+      "started_at": "2026-10-13T05:55:01.107Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "182283ce551b1c69b92402bc841deec4daf3b7dacfc3950dfad21a7bd69358b1",
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 99,
+            "total_tokens": 937,
+            "cost": 0.0001333,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001333,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 4.95e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1244,
+            "completion_tokens": 212,
+            "total_tokens": 1456,
+            "cost": 0.0002304,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002304,
+              "upstream_inference_prompt_cost": 0.0001244,
+              "upstream_inference_completions_cost": 0.000106
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1649,
+            "completion_tokens": 351,
+            "total_tokens": 2000,
+            "cost": 0.0003404,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003404,
+              "upstream_inference_prompt_cost": 0.0001649,
+              "upstream_inference_completions_cost": 0.0001755
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 99,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2193,
+            "completion_tokens": 229,
+            "total_tokens": 2422,
+            "cost": 0.0003338,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003338,
+              "upstream_inference_prompt_cost": 0.0002193,
+              "upstream_inference_completions_cost": 0.0001145
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 192,
+            "total_tokens": 1040,
+            "cost": 0.0001808,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001808,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 9.6e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 43,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1559,
+            "completion_tokens": 267,
+            "total_tokens": 1826,
+            "cost": 0.0002894,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002894,
+              "upstream_inference_prompt_cost": 0.0001559,
+              "upstream_inference_completions_cost": 0.0001335
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2050,
+            "completion_tokens": 150,
+            "total_tokens": 2200,
+            "cost": 0.00028,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.00028,
+              "upstream_inference_prompt_cost": 0.000205,
+              "upstream_inference_completions_cost": 7.5e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "python-fail-after-snapshot-final": {
+      "language": "python",
+      "started_at": "2026-10-13T06:03:46.586263+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {},
+      "complete": false,
+      "cleanup_verified": true,
+      "failure_type": "IntegrationError",
+      "failure_reason": "Intentional failure for cleanup verification",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": []
+    },
+    "python-live-1": {
+      "language": "python",
+      "started_at": "2026-10-13T05:51:34.808734+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "a4604a3633d27f1acfaa353bfabb7cf64e5158a2916f02e6f322814607895f31",
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 135,
+            "total_tokens": 973,
+            "cost": 0.0001513,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001513,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 6.75e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 35,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1280,
+            "completion_tokens": 373,
+            "total_tokens": 1653,
+            "cost": 0.0003145,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003145,
+              "upstream_inference_prompt_cost": 0.000128,
+              "upstream_inference_completions_cost": 0.0001865
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 139,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1849,
+            "completion_tokens": 160,
+            "total_tokens": 2009,
+            "cost": 0.0002649,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002649,
+              "upstream_inference_prompt_cost": 0.0001849,
+              "upstream_inference_completions_cost": 8e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1523,
+            "completion_tokens": 300,
+            "total_tokens": 1823,
+            "cost": 0.0003023,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003023,
+              "upstream_inference_prompt_cost": 0.0001523,
+              "upstream_inference_completions_cost": 0.00015
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2050,
+            "completion_tokens": 138,
+            "total_tokens": 2188,
+            "cost": 0.000274,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.000274,
+              "upstream_inference_prompt_cost": 0.000205,
+              "upstream_inference_completions_cost": 6.9e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "typescript-demo-final": {
+      "language": "typescript",
+      "started_at": "2026-10-13T06:01:43.759Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "ac40b42d6e3fab1baa928fb5913228c2ff29fe1e98394737725a983146848970",
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 99,
+            "total_tokens": 937,
+            "cost": 0.0001333,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001333,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 4.95e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1244,
+            "completion_tokens": 184,
+            "total_tokens": 1428,
+            "cost": 0.0002164,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002164,
+              "upstream_inference_prompt_cost": 0.0001244,
+              "upstream_inference_completions_cost": 9.2e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1621,
+            "completion_tokens": 314,
+            "total_tokens": 1935,
+            "cost": 0.0003191,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003191,
+              "upstream_inference_prompt_cost": 0.0001621,
+              "upstream_inference_completions_cost": 0.000157
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 90,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2128,
+            "completion_tokens": 171,
+            "total_tokens": 2299,
+            "cost": 0.0002983,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002983,
+              "upstream_inference_prompt_cost": 0.0002128,
+              "upstream_inference_completions_cost": 8.55e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1501,
+            "completion_tokens": 263,
+            "total_tokens": 1764,
+            "cost": 0.0002816,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002816,
+              "upstream_inference_prompt_cost": 0.0001501,
+              "upstream_inference_completions_cost": 0.0001315
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1988,
+            "completion_tokens": 158,
+            "total_tokens": 2146,
+            "cost": 0.0002778,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002778,
+              "upstream_inference_prompt_cost": 0.0001988,
+              "upstream_inference_completions_cost": 7.9e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "typescript-deadlines-final": {
+      "language": "typescript",
+      "started_at": "2026-10-13T06:09:50.090Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "a97597489dc2a350d6ba168427405749aac15d853cf9485b135a675c22caf03f",
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 132,
+            "total_tokens": 970,
+            "cost": 0.0001498,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001498,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 6.6e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 32,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1277,
+            "completion_tokens": 255,
+            "total_tokens": 1532,
+            "cost": 0.0002552,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002552,
+              "upstream_inference_prompt_cost": 0.0001277,
+              "upstream_inference_completions_cost": 0.0001275
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1725,
+            "completion_tokens": 388,
+            "total_tokens": 2113,
+            "cost": 0.0003665,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003665,
+              "upstream_inference_prompt_cost": 0.0001725,
+              "upstream_inference_completions_cost": 0.000194
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 113,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2306,
+            "completion_tokens": 184,
+            "total_tokens": 2490,
+            "cost": 0.0003226,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003226,
+              "upstream_inference_prompt_cost": 0.0002306,
+              "upstream_inference_completions_cost": 9.2e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1535,
+            "completion_tokens": 295,
+            "total_tokens": 1830,
+            "cost": 0.000301,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.000301,
+              "upstream_inference_prompt_cost": 0.0001535,
+              "upstream_inference_completions_cost": 0.0001475
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2054,
+            "completion_tokens": 158,
+            "total_tokens": 2212,
+            "cost": 0.0002844,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002844,
+              "upstream_inference_prompt_cost": 0.0002054,
+              "upstream_inference_completions_cost": 7.9e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "network-diagnostic": {
+      "language": "python",
+      "started_at": "2026-10-13T05:58:57.208268+00:00",
+      "model": "none",
+      "checks": {
+        "network_diagnostic": {
+          "stdout": "",
+          "stderr": "",
+          "exit_code": 124,
+          "limit": "timeout"
+        }
+      },
+      "complete": false,
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [],
+      "model_calls": []
+    },
+    "python-fail-after-create-final": {
+      "language": "python",
+      "started_at": "2026-10-13T06:03:39.260017+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {},
+      "complete": false,
+      "cleanup_verified": true,
+      "failure_type": "IntegrationError",
+      "failure_reason": "Intentional failure for cleanup verification",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [],
+      "model_calls": []
+    },
+    "typescript-boundaries-final": {
+      "language": "typescript",
+      "started_at": "2026-10-13T06:03:06.302Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "network_host_control": true,
+        "sandbox_credentials_absent": true,
+        "exception_is_failure": true,
+        "timeout_enforced": true,
+        "output_bounded": true,
+        "credentials_absent": true,
+        "network_request_blocked_or_timed_out": true
+      },
+      "complete": true,
+      "tool_events": [],
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [],
+      "model_calls": []
+    },
+    "python-boundaries-1": {
+      "language": "python",
+      "started_at": "2026-10-13T05:57:58.651652+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "network_host_control": true,
+        "sandbox_credentials_absent": true,
+        "exception_is_failure": true,
+        "timeout_enforced": true,
+        "output_bounded": true,
+        "credentials_absent": true,
+        "network_denied": false
+      },
+      "complete": false,
+      "cleanup_verified": true,
+      "failure_type": "RuntimeError",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [],
+      "model_calls": []
+    },
+    "typescript-cleanup-final": {
+      "language": "typescript",
+      "started_at": "2026-10-13T06:01:43.759Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "ac40b42d6e3fab1baa928fb5913228c2ff29fe1e98394737725a983146848970",
+      "cleanup_verified": true,
+      "recovery_test": "Replay cleanup after provider deletion, simulating a lost cleanup journal update",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 99,
+            "total_tokens": 937,
+            "cost": 0.0001333,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001333,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 4.95e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1244,
+            "completion_tokens": 184,
+            "total_tokens": 1428,
+            "cost": 0.0002164,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002164,
+              "upstream_inference_prompt_cost": 0.0001244,
+              "upstream_inference_completions_cost": 9.2e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1621,
+            "completion_tokens": 314,
+            "total_tokens": 1935,
+            "cost": 0.0003191,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003191,
+              "upstream_inference_prompt_cost": 0.0001621,
+              "upstream_inference_completions_cost": 0.000157
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 90,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2128,
+            "completion_tokens": 171,
+            "total_tokens": 2299,
+            "cost": 0.0002983,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002983,
+              "upstream_inference_prompt_cost": 0.0002128,
+              "upstream_inference_completions_cost": 8.55e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1501,
+            "completion_tokens": 263,
+            "total_tokens": 1764,
+            "cost": 0.0002816,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002816,
+              "upstream_inference_prompt_cost": 0.0001501,
+              "upstream_inference_completions_cost": 0.0001315
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1988,
+            "completion_tokens": 158,
+            "total_tokens": 2146,
+            "cost": 0.0002778,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002778,
+              "upstream_inference_prompt_cost": 0.0001988,
+              "upstream_inference_completions_cost": 7.9e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "typescript-fail-after-create-final": {
+      "language": "typescript",
+      "started_at": "2026-10-13T06:03:43.247Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {},
+      "complete": false,
+      "tool_events": [],
+      "cleanup_verified": true,
+      "failure_type": "IntegrationError",
+      "failure_reason": "Intentional failure for cleanup verification",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [],
+      "model_calls": []
+    },
+    "typescript-fail-after-snapshot-final": {
+      "language": "typescript",
+      "started_at": "2026-10-13T06:04:05.257Z",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {},
+      "complete": false,
+      "tool_events": [],
+      "cleanup_verified": true,
+      "failure_type": "IntegrationError",
+      "failure_reason": "Intentional failure for cleanup verification",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": []
+    },
+    "python-cleanup-final": {
+      "language": "python",
+      "started_at": "2026-10-13T06:00:56.971117+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "cbce90a2f31296cef8e40b772ec9de08115ff177ac8e7b707dc5a4858769fee3",
+      "cleanup_verified": true,
+      "recovery_test": "Replay cleanup after provider deletion, simulating a lost cleanup journal update",
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 176,
+            "total_tokens": 1014,
+            "cost": 0.0001718,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001718,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 8.8e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 76,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1321,
+            "completion_tokens": 382,
+            "total_tokens": 1703,
+            "cost": 0.0003231,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003231,
+              "upstream_inference_prompt_cost": 0.0001321,
+              "upstream_inference_completions_cost": 0.000191
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 125,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1899,
+            "completion_tokens": 159,
+            "total_tokens": 2058,
+            "cost": 0.0002694,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002694,
+              "upstream_inference_prompt_cost": 0.0001899,
+              "upstream_inference_completions_cost": 7.95e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1522,
+            "completion_tokens": 299,
+            "total_tokens": 1821,
+            "cost": 0.0003017,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003017,
+              "upstream_inference_prompt_cost": 0.0001522,
+              "upstream_inference_completions_cost": 0.0001495
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2048,
+            "completion_tokens": 117,
+            "total_tokens": 2165,
+            "cost": 0.0002633,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002633,
+              "upstream_inference_prompt_cost": 0.0002048,
+              "upstream_inference_completions_cost": 5.85e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    },
+    "python-demo-final": {
+      "language": "python",
+      "started_at": "2026-10-13T06:00:56.971117+00:00",
+      "model": "anthropic/claude-haiku-5.5",
+      "checks": {
+        "initial_tests_fail": true,
+        "repair_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "repair_passed_independent_tests": true,
+        "restored_files_match": true,
+        "followup_verification": {
+          "stdout": "",
+          "stderr": "test_empty (test_totals.InvoiceTests.test_empty) ... ok\ntest_quantity (test_totals.InvoiceTests.test_quantity) ... ok\ntest_large_exact_integer (test_acceptance.AcceptanceTests.test_large_exact_integer) ... ok\ntest_multiple_lines (test_acceptance.AcceptanceTests.test_multiple_lines) ... ok\ntest_no_mutation (test_acceptance.AcceptanceTests.test_no_mutation) ... ok\ntest_zero_price (test_acceptance.AcceptanceTests.test_zero_price) ... ok\ntest_zero_quantity (test_acceptance.AcceptanceTests.test_zero_quantity) ... ok\ntest_shipping (test_followup.ShippingTests.test_shipping) ... ok\ntest_default (test_shipping_acceptance.ShippingAcceptance.test_default) ... ok\ntest_empty_with_shipping (test_shipping_acceptance.ShippingAcceptance.test_empty_with_shipping) ... ok\ntest_large_shipping (test_shipping_acceptance.ShippingAcceptance.test_large_shipping) ... ok\ntest_negative_shipping (test_shipping_acceptance.ShippingAcceptance.test_negative_shipping) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.000s\n\nOK\n",
+          "exit_code": 0,
+          "limit": null
+        },
+        "followup_passed_independent_tests": true
+      },
+      "complete": true,
+      "tool_events": [
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": false,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": false,
+          "exit_code": 0,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "read_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "write_file",
+          "followup": true,
+          "exit_code": null,
+          "error": null
+        },
+        {
+          "name": "run_tests",
+          "followup": true,
+          "exit_code": 0,
+          "error": null
+        }
+      ],
+      "source_sha256": "cbce90a2f31296cef8e40b772ec9de08115ff177ac8e7b707dc5a4858769fee3",
+      "cleanup_verified": true,
+      "sandboxes": [
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        },
+        {
+          "terminated": true,
+          "final_status": "terminated"
+        }
+      ],
+      "snapshots": [
+        {
+          "deleted": true
+        }
+      ],
+      "model_calls": [
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 838,
+            "completion_tokens": 176,
+            "total_tokens": 1014,
+            "cost": 0.0001718,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001718,
+              "upstream_inference_prompt_cost": 8.38e-05,
+              "upstream_inference_completions_cost": 8.8e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 76,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1321,
+            "completion_tokens": 382,
+            "total_tokens": 1703,
+            "cost": 0.0003231,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003231,
+              "upstream_inference_prompt_cost": 0.0001321,
+              "upstream_inference_completions_cost": 0.000191
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 125,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1899,
+            "completion_tokens": 159,
+            "total_tokens": 2058,
+            "cost": 0.0002694,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002694,
+              "upstream_inference_prompt_cost": 0.0001899,
+              "upstream_inference_completions_cost": 7.95e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": false
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 848,
+            "completion_tokens": 148,
+            "total_tokens": 996,
+            "cost": 0.0001588,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0001588,
+              "upstream_inference_prompt_cost": 8.48e-05,
+              "upstream_inference_completions_cost": 7.4e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 1522,
+            "completion_tokens": 299,
+            "total_tokens": 1821,
+            "cost": 0.0003017,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0003017,
+              "upstream_inference_prompt_cost": 0.0001522,
+              "upstream_inference_completions_cost": 0.0001495
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        },
+        {
+          "model": "anthropic/claude-haiku-5.5",
+          "usage": {
+            "prompt_tokens": 2048,
+            "completion_tokens": 117,
+            "total_tokens": 2165,
+            "cost": 0.0002633,
+            "is_byok": false,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "audio_tokens": 0,
+              "video_tokens": 0
+            },
+            "cost_details": {
+              "upstream_inference_cost": 0.0002633,
+              "upstream_inference_prompt_cost": 0.0002048,
+              "upstream_inference_completions_cost": 5.85e-05
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "image_tokens": 0,
+              "audio_tokens": 0
+            }
+          },
+          "followup": true
+        }
+      ]
+    }
+  }
+}

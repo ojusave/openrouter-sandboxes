@@ -1,0 +1,18 @@
+# Dependencies, credentials, and generated run files
+.venv/
+node_modules/
+.runs/
+__pycache__/
+.ruff_cache/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Private development evidence and local previews
+/docs/validation-evidence.json
+/docs/cleanup-audit.json
+/docs/preview.html
+/docs/preview-*.png
+/docs/diagram-*.png
